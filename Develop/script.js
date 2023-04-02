@@ -32,4 +32,18 @@ $(function () {
     console.log(thisTime);
     $("#currentDay").text("Today, it is: " + thisTime);
   }, 1000)
+
+
+  //establishes hour variable to check with logic
+  //for time blocks
+  //will assign background color with class based on before during or after
+  let thisHour = dayjs().format('hh')
+  console.log(thisHour);
+
+
+  $("div").each(function(){
+    if($(this).attr('id')== "hour-10"){
+      $(this).addClass("past");    }
+  })
+
 });
