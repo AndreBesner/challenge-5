@@ -26,7 +26,6 @@ $(function () {
 
   // function to print current day and time to screen
   // setInterval in order to update 
-
   let thisTime = dayjs().format('MMMM DD, YYYY')
   setInterval(()=>{
     console.log(thisTime);
@@ -37,15 +36,8 @@ $(function () {
   //establishes hour variable to check with logic
   //for time blocks
   //will assign background color with class based on before during or after
-  let thisHour = dayjs().format('h')
+  let thisHour = dayjs().format('HH')
   console.log(thisHour);
-
-
-  // $(".time-block").each(function(){
-  //   if($(this).attr('id')== "hour-10"){
-  //     $(this).addClass("past");    }
-  // })
-
   $(".time-block").each(function(){
     let timeBlockTime = $(this).attr("data-time");
     console.log(timeBlockTime);
@@ -59,5 +51,18 @@ $(function () {
       $(this).addClass("future");
     }
   })
+
+
+
+  // //saves box to local storage
+  // $(".time-block").each(function(){
+    
+  // })
+
+
+  //prints local storage to box
+
+
+
 
 });
