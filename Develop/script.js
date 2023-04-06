@@ -28,19 +28,13 @@ $(function () {
   // setInterval in order to update 
   let thisTime = dayjs().format('MMMM DD, YYYY')
   setInterval(()=>{
-    console.log(thisTime);
+    // console.log(thisTime);
     $("#currentDay").text("Today, it is: " + thisTime);
-  }, 1000)
-
-
-  //establishes hour variable to check with logic
-  //for time blocks
-  //will assign background color with class based on before during or after
-  let thisHour = dayjs().format('HH')
-  console.log(thisHour);
-  $(".time-block").each(function(){
+    let thisHour = dayjs().format('HH')
+    // console.log(thisHour);
+    $(".time-block").each(function(){
     let timeBlockTime = $(this).attr("data-time");
-    console.log(timeBlockTime);
+    // console.log(timeBlockTime);
     if($(this).attr("data-time") < thisHour){
       $(this).addClass("past");
     }
@@ -51,6 +45,27 @@ $(function () {
       $(this).addClass("future");
     }
   })
+  }, 1000)
+
+
+  //establishes hour variable to check with logic
+  //for time blocks
+  //will assign background color with class based on before during or after
+  // let thisHour = dayjs().format('HH')
+  // console.log(thisHour);
+  // $(".time-block").each(function(){
+  //   let timeBlockTime = $(this).attr("data-time");
+  //   console.log(timeBlockTime);
+  //   if($(this).attr("data-time") < thisHour){
+  //     $(this).addClass("past");
+  //   }
+  //   else if($(this).attr("data-time") == thisHour){
+  //     $(this).addClass("present");
+  //   }
+  //   if($(this).attr("data-time") > thisHour){
+  //     $(this).addClass("future");
+  //   }
+  // })
 
 
 
