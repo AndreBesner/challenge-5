@@ -21,7 +21,7 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 
-
+displayDescriptions();
 
 
   // function to print current day and time to screen
@@ -92,9 +92,22 @@ $(function () {
     let text = $(this).siblings("textarea").val();
     console.log(text);
     localStorage.setItem(idHour, text);
+    console.log(localStorage.getItem("09"));
   })
 
-  console.log(localStorage.getItem(09));
+  function displayDescriptions(){
+   for(var i = 9 ; i <= 17 ; i++){
+    console.log('wah')
+    var desc = localStorage.getItem(i);
+    console.log(desc);
+    // $(".description" +i).val(desc);
+    $(".time-block[data-time='" + i + "'] .description").val(desc);
+     }
+  }
+  
+  
+
+  // console.log(localStorage.getItem("event" + 09));
 
   
 

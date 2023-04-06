@@ -11,3 +11,7 @@ dayjs powerful, has .isBefore and .isAfter, you can set additional flags like 'h
 make variable for current time
 
 print to screen with proper formatting using jquery
+
+
+for saving the events each time block has a descriptions class
+
