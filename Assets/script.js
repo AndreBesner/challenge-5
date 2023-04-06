@@ -22,7 +22,7 @@ let thisTime = dayjs().format('MMMM DD, YYYY')
       $(this).addClass("future");
     }
   })
-  }, 1000) //Elements on screen update every second. May need increase time if scope of project ever increases
+  }, 1000) //Elements on screen update every second. May need increase time between updates if scope of project ever increases
 
   // The following functions represent the saving of user typed data to local storage to be recalled later
   // This function is executed when the user clicks the save button appended to the text area 
