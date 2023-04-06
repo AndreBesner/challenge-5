@@ -95,15 +95,27 @@ displayDescriptions();
     console.log(localStorage.getItem("09"));
   })
 
+  // function displayDescriptions(){
+  //  for(var i = 9 ; i <= 17 ; i++){
+  //   console.log('wah')
+  //   var desc = localStorage.getItem(i);
+  //   console.log(desc);
+  //   // $(".description" +i).val(desc);
+  //   $(".time-block[data-time='" + i + "'] .description").val(desc);
+  //   $(".time-block[data-time='9'] .description").val(desc);
+  //   }
+  // }
+
   function displayDescriptions(){
-   for(var i = 9 ; i <= 17 ; i++){
-    console.log('wah')
-    var desc = localStorage.getItem(i);
-    console.log(desc);
-    // $(".description" +i).val(desc);
-    $(".time-block[data-time='" + i + "'] .description").val(desc);
-     }
-  }
+    for(var i = 9 ; i <= 17 ; i++){
+        var desc = localStorage.getItem(i);
+        console.log(desc);
+        $(".time-block[data-time='" + i + "'] .description").val(desc);
+        if (i == 9 && desc != null) {
+          $(".time-block[data-time='09'] .description").val(desc);
+        }
+    }
+}
   
   
 
