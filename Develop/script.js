@@ -74,10 +74,12 @@ $(function () {
     let idHour = $(this).parents().attr("data-time");
     console.log("test" +idHour);
     console.log($(this).parents().attr("data-time")); //this actually goes up tree and finds that data time atrr to helps save to local storage
-    var text = $(this).siblings("textarea").val();
+    let text = $(this).siblings("textarea").val();
     console.log(text);
     localStorage.setItem(idHour, text);
   })
+
+  console.log(localStorage.getItem(09));
 
   
 
